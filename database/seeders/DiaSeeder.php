@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Dia;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DiaSeeder extends Seeder

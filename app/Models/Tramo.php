@@ -9,6 +9,8 @@ class Tramo extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['horario'];
+
     public function dias()
     {
         return $this->belongsToMany(Dia::class);

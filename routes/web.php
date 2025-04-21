@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DiaController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ReservaController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -19,5 +20,6 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('dias', DiaController::class);
+Route::post('/reservas/{tramo}/{dia}', [ReservaController::class, 'store'])->name('reservas.store');
 
 require __DIR__.'/auth.php';

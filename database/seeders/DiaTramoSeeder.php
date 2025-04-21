@@ -15,7 +15,7 @@ class DiaTramoSeeder extends Seeder
     public function run(): void
     {
         $dias = Dia::all();
-        $tramos = Tramo::all()->pluck('id'); // obtenemos solo los IDs
+        $tramos = Tramo::all();
 
         foreach ($dias as $dia) {
             $dia->tramos()->attach($tramos);
